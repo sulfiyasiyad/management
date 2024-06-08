@@ -1,37 +1,25 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from './Register.jsx';
 
-import Navbar from "./Navbar.jsx";
-import Signin from "./Signin.jsx";
-import Signup from "./Signup.jsx";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-
+import Home from './Home.jsx';
 
 
+import Signin from './Signin.jsx';
+import Admin from './Admin.jsx';
 
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="register" element={<Register />} />
+                <Route path="/login" element={<Signin />} />
+                <Route path="/admin" element={<Admin />} />
 
-
-function App() {
-  return (
-    <div>
-    <BrowserRouter>
-    <Navbar />
-    
-   <Routes>
-    
-     
-    
-    
-     <Route path="/Signup" element={<Signup />}></Route>
-     <Route path="/Signin" element={<Signin />}></Route>
-  
-
-   </Routes>
-   </BrowserRouter>
-   
-    </div>
-
-    
-  );
-}
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
