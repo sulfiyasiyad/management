@@ -7,6 +7,7 @@ import Home from './Home.jsx';
 
 import Signin from './Signin.jsx';
 import Admin from './Admin.jsx';
+import Addproduct from'./Addproduct.jsx';
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <Route path="register" element={<Register />} />
                 <Route path="/login" element={<Signin />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/addproduct" element={<Addproduct />} />
 
             </Routes>
         </Router>
